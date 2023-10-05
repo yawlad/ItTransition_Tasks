@@ -1,0 +1,1 @@
+function f(a_s){if(!a_s.length)return"";let r="";const f_s=a_s[0];for(let i=0;i<f_s.length;i++)for(let j=i+1;j<=f_s.length;j++){const sub_s=f_s.slice(i,j);let fl=true;for(let k=1;k<a_s.length;k++)if(!a_s[k].includes(sub_s)){fl=false;break}if(fl&&sub_s.length>r.length)r=sub_s}return r}console.log(f(process.argv.slice(2)));
