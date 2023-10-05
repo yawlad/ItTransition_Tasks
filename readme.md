@@ -6,6 +6,7 @@ Welcome to my repository for storing the tasks I have completed during my intern
 
 - [Task 01](#task-01)
 - [Task 02](#task-02)
+- [Task 03](#task-03)
 
 ## Task 01
 
@@ -16,6 +17,11 @@ Welcome to my repository for storing the tasks I have completed during my intern
 
 - [Task Description](Task_02/task_description.md)
 - [Solution](Task_02/solution/)
+
+## Task 03
+
+- [Task Description](Task_03/task_description.md)
+- [Solution](Task_03/solution/)
 
 ## Contribution
 
