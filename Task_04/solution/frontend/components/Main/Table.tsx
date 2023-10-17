@@ -52,11 +52,23 @@ export default function Table() {
     }
   };
 
+  const handleSelectAllUsers = () => {
+    if (selectedUsers.length === users.length) {
+      setSelectedUsers([]);
+    } else {
+      setSelectedUsers([...users]);
+    }
+  };
+
   const isUserSelected = (user: UserType) => {
     console.log(
       selectedUsers.some((selectedUser) => selectedUser.id === user.id)
     );
     return selectedUsers.some((selectedUser) => selectedUser.id === user.id);
+  };
+
+  const isAllUsersSelected = () => {
+    return selectedUsers.length === users.length;
   };
 
   const handleBlockButton = async () => {
@@ -93,7 +105,14 @@ export default function Table() {
       <table className="min-w-full">
         <thead>
           <TableRow head={true}>
-            <TableCell />
+            <TableCell>
+              <button
+                onClick={() => handleSelectAllUsers()}
+                className={`p-2 rounded-sm border-gray-500 border-2 hover:bg-gray-200 duration-500 ${
+                  isAllUsersSelected() ? "bg-gray-200" : "bg-transparent"
+                }`}
+              ></button>
+            </TableCell>
             <TableCell>
               <div className="flex flex-col">
                 <span>Name</span>
@@ -128,7 +147,9 @@ export default function Table() {
                   <span className="font-light">{user.email}</span>
                 </TableCell>
                 <TableCell>
-                  <span className="font-light">{formatDate(user.last_login)}</span>
+                  <span className="font-light">
+                    {formatDate(user.last_login)}
+                  </span>
                 </TableCell>
                 <TableCell last={true}>
                   <span
