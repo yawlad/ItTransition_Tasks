@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main-block {
+  @apply border border-secondary backdrop-blur-lg;
+  background-color: hsla(0,0%,100%,.01);
+  box-shadow: -1px 1px 11px 3px hsla(0,0%,100%,.01);
+}
+
+.animated-gradient {
+    @apply bg-gradient bg-clip-text text-transparent bg-[length:200%] animate-bg-gradient-anim;
+}
+
+.standart-button {
+  @apply py-2 px-4 border border-secondary hover:border-white w-fit h-fit rounded-md hover:scale-105 duration-500 cursor-pointer;
+}
