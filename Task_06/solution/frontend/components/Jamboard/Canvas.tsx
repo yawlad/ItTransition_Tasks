@@ -50,7 +50,7 @@ const Canvas = observer(() => {
   }, []);
 
   useEffect(() => {
-    const socket = new WebSocket("ws://localhost:5000/");
+    const socket = new WebSocket("wss://task-06-backend.onrender.com/");
     sessionState.setSocket(socket);
     toolState.setTool(
       new Pencil(
