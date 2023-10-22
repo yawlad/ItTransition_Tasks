@@ -1,61 +1,24 @@
 # Task 6
 
-## Problem Description
+## Description
 
-You need to write a JavaScript code that prints the longest common substring of the passed arguments, with a trailing newline. The code will run under Node.js, and the arguments will be passed via the command line (you should not read the standard input stream).
+**Backend**: Node.js with Express.js
+**Frontend**: Next.js
 
-If the longest common superstring is empty (no arguments are passed or arguments have no common substrings), you should print a single newline.
+Create a web application for "collaborative drawing" with open access, using Google Jamboard as an example.
 
-If there are multiple valid solutions, you can print any one of them.
+No registration or authentication is required. All users have immediate access to a list of "boards" (users simply enter a random name when logging in).
 
-### Limits
+Each user can create a "board" or join an existing one.
 
-- Single string length is less than or equal to 256 characters.
-- Number of strings is less than or equal to 64.
-- Strings contain only English letters and digits.
-- Time limit per test is 5 seconds.
+Multiple users can draw on the same "board" simultaneously. When someone draws something, it appears to other users "instantly" (there may be a slight delay, achieved through polling or using websockets).
 
-### Output Requirements
+Everything drawn on the "board" is saved "forever" (if a user joins the board later, they can see everything created earlier).
 
-- The output should not contain any excess characters.
-- The solution is accepted if all tests are passed.
-- The result is calculated based on JavaScript file size (smaller is better).
-- Avoid comments, long names, and unnecessary indents.
+The drawing area should fill the window entirely (except for the tools panel) and should scale/scroll appropriately.
 
-### Constraints
-
-- You cannot use any external packages or imports.
-- You cannot access the external world, e.g., read files, open network connections, etc.
-- Your solution should be placed in a file named `lcs.js`.
-- Use only command-line arguments (no `readline`, `process.stdin`, etc.; ONLY `process.argv`).
-- When called without arguments, your script should not fail.
-- Do not share a Dropbox file; instead, send a public link with the long hex identifier.
-- If some tests fail, your grade is zero.
-
-### Examples
-
-```shell
-node lcs.js ABCDEFZ WBCDXYZ
-# Output: BCD
-
-node lcs.js 132 12332 12312
-# Output: 1
-
-node lcs.js ABCDEFGH ABCDEFG ABCEDF ABCED
-# Output: ABC
-
-node lcs.js ABCDEFGH ABCDEFG ABCDEF ABCDE
-# Output: ABCDE
-
-node lcs.js ABCDEFGH ABCDEFG ABCDEF ABCDE EDCBA
-# Output: A
-
-node lcs.js ABCDEFGH ABCDEFG AxBCDEF ABCDxE EDCBCAABCD
-# Output: BCD
-
-node lcs.js ABCDEFGH 1234
-# Output: 
-# (Single newline, as no common substring is found)
-
-node lcs.js ABCDEFGH
-# Output: ABCDEFGH
+Optional Requirements (each one will enhance the evaluation):
+* Ability to erase previously drawn elements.
+* Multiple drawing tools (e.g., "text," "rectangle," "circle") with color options.
+* Thumbnails for board previews in the list of "boards."
+* Option to export the drawing as JPEG.
