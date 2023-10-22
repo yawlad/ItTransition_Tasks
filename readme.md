@@ -8,7 +8,7 @@ Welcome to my repository for storing the tasks I have completed during my intern
 - [Task 02](#task-02)
 - [Task 03](#task-03)
 - [Task 04](#task-04)
-- [Task 04](#task-06)
+- [Task 06](#task-06)
 
 ## Task 01
 
